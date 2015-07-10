@@ -21,9 +21,9 @@
       <ul class="nav navbar-nav navbar-right top-nav-ul">
       <li><a href="<?php echo base_url(). ''?>">HOME</a></li>
         <li><a href="<?php echo base_url(). 'home/about'?>">ABOUT</a></li>
-        <li><a href="<?php echo base_url(). 'home/portfolio'?>">PORTFOLIO</a></li>
         <li><a href="<?php echo base_url(). 'home/services'?>">SERVICES</a></li>
         <li><a href="<?php echo base_url(). 'home/contact'?>">CONTACTS</a></li>
+        <li><a href="<?php echo base_url(). 'home/portfolio'?>">PORTFOLIO</a></li>
         
         <li class="dropdown">
           <a href="<?php echo base_url(). 'gallery/photogallery/all'?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECT GALLERY <span class="caret"></span></a>
