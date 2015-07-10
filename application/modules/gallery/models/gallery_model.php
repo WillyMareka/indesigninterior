@@ -8,18 +8,20 @@ class Gallery_model extends MY_Model {
         parent::__construct();
     }
 
-    
+  
+	
 
-	// function get_all_rooms()
-	// {
-	// 	$sql = "SELECT 
-	// 				*
-	// 			FROM
-	// 				`category`";
+    function get_all_rooms()
+	{
+		$sql = "SELECT 
+					roomid as 'Room ID',
+					roomname as 'Room Name'
+				FROM
+					`category`";
 					
-	// 	$result = $this->db->query($sql);
-	// 	return $result->result_array();
-	// }
+		$result = $this->db->query($sql);
+		return $result->result_array();
+	}
 	
 	
 	

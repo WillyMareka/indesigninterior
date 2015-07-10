@@ -6,8 +6,6 @@ html, body {
 }
 
 
-
-
 .top-navigation{
     border-radius: 0;
 }
@@ -21,9 +19,25 @@ html, body {
   background-color: #FFFFFF;
 }
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  color:#1abc9c;
+}
+
+  
+/*.dropdown:hover .dropdown-menu {
+display: block;
+}*/
+
+
 .dropdown-menu>li>a{
-    color:#000000;
-    background-color: #FFFFFF;
+    color:#FFFFFF;
+    background-color: #1abc9c;
+    
+}
+
+.dropdown-menu>li>a:hover{
+    color:#FFFFFF;
+    background-color: #1abc9c;
     
 }
 
@@ -465,6 +479,8 @@ a.social:hover{
   	font-family: "Ubuntu";
 
   }
+
+
 
 
   /*portfolio page*/

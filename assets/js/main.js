@@ -36,6 +36,12 @@ $(document).ready(function(){
       });
     });
 
+    $('.nav li.dropdown').hover(function() {
+        $(this).addClass('open');
+    }, function() {
+        $(this).removeClass('open');
+    });
+
      // ....Function for registering estates.... //
  $(function(){
        $("#contact_mesage").submit(function(){

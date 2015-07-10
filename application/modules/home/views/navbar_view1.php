@@ -26,7 +26,7 @@
         <li><a href="<?php echo base_url(). 'home/portfolio'?>">PORTFOLIO</a></li>
         
         <li class="dropdown">
-          <a href="<?php echo base_url(). 'gallery'?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECT GALLERY <span class="caret"></span></a>
+          <a href="<?php echo base_url(). 'gallery'?>" data-target="<?php echo base_url(). 'gallery'?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">PROJECT GALLERY<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <?php
               echo $dropcategories;

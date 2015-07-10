@@ -18,30 +18,40 @@ class Gallery extends MY_Controller {
     function index()
     {
         $data[''] = '';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
-        $data['content_page'] = 'home/contacts';
+        // $data['content_page'] = 'home/contacts';
         $data['main_footer'] = 'home/footer_view1';
         
         
         $this->template->call_template($data);
     }
 
-    // function getAllRooms()
-    // {
+    // function photogallery(categoryid){
+    //     $data['dropcategories'] = $this->getAllRooms();
+    //     $data['top_navbar1'] = 'home/navbar_view1';
+    //     // $data['content_page'] = 'home/contacts';
+    //     $data['main_footer'] = 'home/footer_view1';
         
-
-    //     $catdropdown = '';
-    //     $gallery = $this->gallery_model->get_all_rooms();
-    //     // echo "<pre>";print_r($estates);die();
-    //     $catdropdown .= '<li><a href="'echo base_url().'gallery/"></a></li>';
-    //     $catdropdown .= '<option value="0" selected>Select: Estate Name</option>';
-    //     foreach ($estates as $key => $value) {
-    //         $catdropdown .= '<option value="'.$value['Estate ID'].'">'.$value['Estate Name'].'</option>';
-    //     }
-    //     $catdropdown .= '</li>';
-
-    //     return $catdropdown;
+        
+    //     $this->template->call_template($data);
     // }
+
+    function getAllRooms()
+    {
+        $catdropdown = '';
+        $gallery = $this->home_model->get_all_rooms();
+        //echo "<pre>";print_r($gallery);die();
+        
+        foreach ($gallery as $key => $value) {
+            $catdropdown .= '<li><a href="';
+            echo base_url();
+            $catdropdown .= 'gallery/photogallery/'.$value['Room ID'].'">'.$value['Room Name'].'</a></li>'; 
+        }
+        //echo "<pre>";print_r($catdropdown);die();
+
+        return $catdropdown;
+    }
 
 
     
