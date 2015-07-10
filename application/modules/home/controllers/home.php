@@ -80,10 +80,7 @@ class Home extends MY_Controller {
     //     $this->template->call_template($data);
     // }
 	
-<<<<<<< HEAD
 
-=======
->>>>>>> 20b1b941e4671b65c46510448b4e0d7a74f18890
 
     function sendcomment()
     {
