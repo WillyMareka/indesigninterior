@@ -12,7 +12,14 @@ class template extends MY_Controller
 		parent:: __construct();
 	}
 
-	function call_template($data = NULL)
+	function call_home_template($data = NULL)
+	{
+		// echo "You have gained access to the template controller";
+		// echo "<pre>";print_r($data);die();
+		$this->load->view('template_view', $data);
+	}
+
+	function call_gallery_template($data = NULL)
 	{
 		// echo "You have gained access to the template controller";
 		// echo "<pre>";print_r($data);die();

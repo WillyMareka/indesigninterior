@@ -20,21 +20,24 @@ class Gallery extends MY_Controller {
         $data[''] = '';
         $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
-        // $data['content_page'] = 'home/contacts';
+        $data['gallery_sidebar'] = 'sideview';
+        $data['content_page'] = 'gallery/contentview';
         $data['main_footer'] = 'home/footer_view1';
         
         
-        $this->template->call_template($data);
+        $this->template->call_gallery_template($data);
     }
 
     // function photogallery(categoryid){
-    //     $data['dropcategories'] = $this->getAllRooms();
-    //     $data['top_navbar1'] = 'home/navbar_view1';
-    //     // $data['content_page'] = 'home/contacts';
-    //     $data['main_footer'] = 'home/footer_view1';
+    //     $data[''] = '';
+        // $data['dropcategories'] = $this->getAllRooms();
+        // $data['top_navbar1'] = 'home/navbar_view1';
+        // $data['gallery_sidebar'] = 'sideview';
+        // $data['content_page'] = 'gallery/contentview';
+        // $data['main_footer'] = 'home/footer_view1';
         
         
-    //     $this->template->call_template($data);
+        // $this->template->call_gallery_template($data);
     // }
 
     function getAllRooms()

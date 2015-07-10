@@ -24,7 +24,7 @@ class Home extends MY_Controller {
         $data['main_footer'] = 'home/footer_view1';
         
         
-        $this->template->call_template($data);
+        $this->template->call_home_template($data);
     }
 
 
@@ -37,7 +37,7 @@ class Home extends MY_Controller {
         $data['main_footer'] = 'home/footer_view1';
         
         
-        $this->template->call_template($data);
+        $this->template->call_home_template($data);
     }
 
     function about()
@@ -49,7 +49,7 @@ class Home extends MY_Controller {
         $data['main_footer'] = 'home/footer_view1';
         
         
-        $this->template->call_template($data);
+        $this->template->call_home_template($data);
     }
 
 
@@ -62,7 +62,7 @@ class Home extends MY_Controller {
         $data['content_page'] = 'home/contacts';
         $data['main_footer'] = 'home/footer_view1';
 
-        $this->template->call_template($data);
+        $this->template->call_home_template($data);
     } 
         
 
@@ -73,7 +73,7 @@ class Home extends MY_Controller {
         $data['content_page']='portfolio/v_portfolio';
         $data['main_footer']='home/footer_view1';
 
-        $this->template->call_template($data);
+        $this->template->call_home_template($data);
     }
 	
 
