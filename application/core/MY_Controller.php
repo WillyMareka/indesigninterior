@@ -15,6 +15,7 @@ class MY_Controller extends MX_Controller
         $this->load->module('home');
         $this->load->module('template');
         $this->load->module('portfolio');
+        $this->load->module('gallery');
 
     }
 
@@ -22,9 +23,6 @@ class MY_Controller extends MX_Controller
    {
     echo base_url();
    }
-
-    
-
 
     public function uploader($file)
     {

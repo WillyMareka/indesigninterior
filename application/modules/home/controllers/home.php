@@ -18,6 +18,7 @@ class Home extends MY_Controller {
     function index()
     {
         $data[''] = '';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
         $data['content_page'] = 'home/v_home';
         $data['main_footer'] = 'home/footer_view1';
@@ -30,6 +31,7 @@ class Home extends MY_Controller {
     function services()
     {
         $data[''] = '';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
         $data['content_page'] = 'home/services';
         $data['main_footer'] = 'home/footer_view1';
@@ -41,6 +43,7 @@ class Home extends MY_Controller {
     function about()
     {
         $data[''] = '';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
         $data['content_page'] = 'home/about';
         $data['main_footer'] = 'home/footer_view1';
@@ -54,6 +57,7 @@ class Home extends MY_Controller {
     function contact()
     {
         $data[''] = '';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1'] = 'home/navbar_view1';
         $data['content_page'] = 'home/contacts';
         $data['main_footer'] = 'home/footer_view1';
@@ -64,21 +68,13 @@ class Home extends MY_Controller {
 
     function portfolio(){
         $data['']='';
+        $data['dropcategories'] = $this->getAllRooms();
         $data['top_navbar1']='home/navbar_view1';
         $data['content_page']='portfolio/v_portfolio';
         $data['main_footer']='home/footer_view1';
 
         $this->template->call_template($data);
     }
-
-    // function photo(){
-    //     $data='';
-    //     $data['top_navbar1']="home/navbar_view1";
-    //     $data['content_page']='photo/v_photo';
-    //     $data['main_footer']='home/footer_view1';
-
-    //     $this->template->call_template($data);
-    // }
 	
 
 
@@ -95,19 +91,21 @@ class Home extends MY_Controller {
     }
 
 
-    // function all_estate_combo()
-    // {
-    //     $estates = $this->estate_model->get_all_estates();
-    //     // echo "<pre>";print_r($estates);die();
-    //     $this->estates_combo .= '<select name="table_search_estate" id="table_search_estate" onchange="get_estate()" class="form-control input-sm js-example-placeholder-single pull-right" style="width: 350px;">';
-    //     $this->estates_combo .= '<option value="0" selected>Select: Estate Name</option>';
-    //     foreach ($estates as $key => $value) {
-    //         $this->estates_combo .= '<option value="'.$value['Estate ID'].'">'.$value['Estate Name'].'</option>';
-    //     }
-    //     $this->estates_combo .= '</select>';
+    function getAllRooms()
+    {
+        $catdropdown = '';
+        $gallery = $this->home_model->get_all_rooms();
+        //echo "<pre>";print_r($gallery);die();
+        
+        foreach ($gallery as $key => $value) {
+            $catdropdown .= '<li><a href="';
+            echo base_url();
+            $catdropdown .= 'gallery/photogallery/'.$value['Room ID'].'">'.$value['Room Name'].'</a></li>'; 
+        }
+        //echo "<pre>";print_r($catdropdown);die();
 
-    //     return $this->estates_combo;
-    // }
+        return $catdropdown;
+    }
 
 	
 

@@ -26,14 +26,11 @@
         <li><a href="<?php echo base_url(). 'home/portfolio'?>">PORTFOLIO</a></li>
         
         <li class="dropdown">
-          <a href="<?php echo base_url(). 'gallery/photogallery/all'?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECT GALLERY <span class="caret"></span></a>
+          <a href="<?php echo base_url(). 'gallery'?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECT GALLERY <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo base_url(). 'gallery/photogallery/kitchen'?>">Kitchen</a></li>
-            <li><a href="<?php echo base_url(). 'gallery/photogallery/'?>">Living Room</a></li>
-            <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">Bedrooms</a></li>
-            <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">Dining Room</a></li>
-            <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">Garden</a></li>
-            <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">Washroom</a></li>
+            <?php
+              echo $dropcategories;
+            ?>
             <li role="separator" class="divider"></li>
             <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">Furniture</a></li>
             <li><a href="<?php echo base_url(). 'gallery/photogallery'?>">House Holds</a></li>

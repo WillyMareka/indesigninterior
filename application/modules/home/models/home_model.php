@@ -21,21 +21,17 @@ class Home_model extends MY_Model {
 
 	}
 
-	// function get_all_estates()
-	// {
-	// 	$sql = "SELECT 
-	// 				estate_id as 'Estate ID',
-	// 				estate_name as 'Estate Name',
-	// 				estate_location as 'Estate Location',
-	// 				estate_status as 'Estate Status',
-	// 				date_registered as 'Date Registered'
-	// 			FROM
-	// 				`estates`";
-	// 	$result = $this->db->query($sql);
-	// 	return $result->result_array();
-	// }
-	// 
-	// 
+	function get_all_rooms()
+	{
+		$sql = "SELECT 
+					roomid as 'Room ID',
+					roomname as 'Room Name'
+				FROM
+					`category`";
+					
+		$result = $this->db->query($sql);
+		return $result->result_array();
+	}
 	
 
 
